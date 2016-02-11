@@ -24,9 +24,9 @@
     "legacy"
   ],
   "dependencies": {
-    "lodash": "~2.4.1",
-    "underscore.string": "~2.3.3",
-    "colors": "~0.6.2"
+    "colors": "^1.1.2",
+    "lodash": "^4.3.0",
+    "underscore.string": "~3.2.3"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
