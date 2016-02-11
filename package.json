@@ -11,18 +11,13 @@
   "bugs": {
     "url": "http://github.com/gruntjs/grunt-legacy-log-utils/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/gruntjs/grunt-legacy-log-utils/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "keywords": [
     "grunt",
@@ -34,7 +29,8 @@
     "colors": "~0.6.2"
   },
   "devDependencies": {
-    "grunt": "0.4.4",
+    "grunt": "~0.4.4",
+    "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.3.3",
     "grunt-contrib-watch": "~0.6.1"
