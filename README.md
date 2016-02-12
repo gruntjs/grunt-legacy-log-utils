@@ -1,4 +1,4 @@
-# grunt-legacy-log
+# grunt-legacy-log-utils
 > Static methods for the Grunt 0.4.x logger.
 
 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-legacy-log-utils.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-legacy-log-utils)
