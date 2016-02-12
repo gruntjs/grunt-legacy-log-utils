@@ -9,15 +9,8 @@
 
 'use strict';
 
-// Requiring this here modifies the String prototype!
-require('colors');
-// The upcoming lodash 2.5+ should remove the need for underscore.string.
+var chalk = require('chalk');
 var _ = require('lodash');
-_.str = require('underscore.string');
-_.mixin(_.str.exports());
-// TODO: ADD CHALK
-
-// Static methods.
 
 // Pretty-format a word list.
 exports.wordlist = function(arr, options) {
@@ -26,7 +19,7 @@ exports.wordlist = function(arr, options) {
     color: 'cyan'
   });
   return arr.map(function(item) {
-    return options.color ? String(item)[options.color] : item;
+    return options.color ? chalk[options.color](item) : item;
   }).join(options.separator);
 };
 
