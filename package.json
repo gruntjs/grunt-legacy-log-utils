@@ -28,7 +28,7 @@
   ],
   "dependencies": {
     "chalk": "~1.1.1",
-    "lodash": "~4.3.0"
+    "lodash": "~4.17.5"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
