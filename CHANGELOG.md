@@ -1,0 +1,18 @@
+- v2.1.0:
+  - date: 2020-07-27
+  - changes:
+    - Update "chalk" and "lodash" dependencies ([#9](https://github.com/gruntjs/grunt-legacy-log-utils/pull/9))
+    - Require Node.js 10 or later
+- v2.0.1:
+  - date: 2018-05-19
+  - changes:
+    - Update dev dependencies ([#7](https://github.com/gruntjs/grunt-legacy-log-utils/pull/7))
+- v2.0.0:
+  - date: 2018-05-17
+  - changes:
+    - Update "chalk" and "lodash" dependencies ([#5](https://github.com/gruntjs/grunt-legacy-log-utils/pull/5))
+    - Require Node.js 6 or later
+- v1.0.0
+  - date: 2016-02-13
+  - changes:
+    - Replace colors with chalk and remove underscore.string ([a67ce8940d](https://github.com/gruntjs/grunt-legacy-log-utils/commit/a67ce8940d))
