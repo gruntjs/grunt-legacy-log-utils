@@ -1,3 +1,7 @@
+- v2.1.1:
+  - date: 2026-04-03
+  - changes:
+    - Remove "lodash" dependency ([84ce097984](https://github.com/gruntjs/grunt-legacy-log-utils/commit/84ce097984), [grunt-legacy-log#35](https://github.com/gruntjs/grunt-legacy-log/issues/35))
 - v2.1.0:
   - date: 2020-07-27
   - changes:
