@@ -10,14 +10,16 @@
 'use strict';
 
 var chalk = require('chalk');
-var _ = require('lodash');
 
 // Pretty-format a word list.
 exports.wordlist = function(arr, options) {
-  options = _.defaults(options || {}, {
-    separator: ', ',
-    color: 'cyan'
-  });
+  options = options || {};
+  if (options.separator === undefined) {
+    options.separator = ', ';
+  }
+  if (options.color === undefined) {
+    options.color = 'cyan';
+  }
   return arr.map(function(item) {
     return options.color ? chalk[options.color](item) : item;
   }).join(options.separator);
@@ -106,7 +108,7 @@ exports.table = function(widths, texts) {
       column = row[i] || '';
       txt += column;
       var diff = widths[i] - this.uncolor(column).length;
-      if (diff > 0) { txt += _.repeat(' ', diff); }
+      if (diff > 0) { txt += ' '.repeat(diff); }
     }
     lines.push(txt);
   }, this);

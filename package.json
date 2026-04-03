@@ -27,13 +27,12 @@
     "legacy"
   ],
   "dependencies": {
-    "chalk": "~4.1.0",
-    "lodash": "~4.17.19"
+    "chalk": "^4.1.0"
   },
   "devDependencies": {
-    "grunt": "~1.2.1",
-    "grunt-contrib-jshint": "~2.1.0",
-    "grunt-contrib-nodeunit": "~2.1.0",
-    "grunt-contrib-watch": "~1.1.0"
+    "grunt": "^1.2.1",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-nodeunit": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
