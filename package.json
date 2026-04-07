@@ -17,7 +17,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "jshint . && qunit"
+    "test": "eslint . && qunit"
   },
   "engines": {
     "node": ">=10"
@@ -29,8 +29,13 @@
   "dependencies": {
     "chalk": "^4.1.0"
   },
+  "overrides": {
+    "eslint-plugin-pabigot": "^1.1.0"
+  },
   "devDependencies": {
-    "jshint": "~2.13.6",
+    "eslint-config-grunt": "^2.0.1",
+    "eslint-plugin-pabigot": "^1.1.0",
+    "eslint": "^7.32.0",
     "qunit": "^2.25.0"
   }
 }

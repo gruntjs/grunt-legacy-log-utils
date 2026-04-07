@@ -46,6 +46,7 @@ exports.wraptext = function(width, text) {
   var captured = [];
   var charlen = 0;
 
+  // eslint-disable-next-line no-cond-assign
   while (matches = text.match(/(?:(\x1B\[\d+m)|\n|(.))([\s\S]*)/)) {
     // Updated text to be everything not matched.
     text = matches[3];
