@@ -17,7 +17,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "grunt test"
+    "test": "jshint . && qunit"
   },
   "engines": {
     "node": ">=10"
@@ -30,9 +30,7 @@
     "chalk": "^4.1.0"
   },
   "devDependencies": {
-    "grunt": "^1.2.1",
-    "grunt-contrib-jshint": "^2.1.0",
-    "grunt-contrib-nodeunit": "^2.1.0",
-    "grunt-contrib-watch": "^1.1.0"
+    "jshint": "~2.13.6",
+    "qunit": "^2.25.0"
   }
 }

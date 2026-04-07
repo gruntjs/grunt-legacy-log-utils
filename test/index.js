@@ -1,29 +1,20 @@
+/* globals QUnit */
 'use strict';
 
+var chalk = require('chalk');
 var logUtils = require('../');
 
-exports['Helpers'] = {
-  setUp: function(done) {
-    done();
-  },
-  'uncolor': function(test) {
-    test.expect(1);
-
-    test.equal(logUtils.uncolor('a'.red + 'b'.bold.green + 'c'.blue.underline), 'abc');
-
-    test.done();
-  },
-  'wordlist': function(test) {
-    test.expect(2);
-
-    test.equal(logUtils.uncolor(logUtils.wordlist(['a', 'b'])), 'a, b');
-    test.equal(logUtils.uncolor(logUtils.wordlist(['a', 'b'], {separator: '-'})), 'a-b');
-
-    test.done();
-  },
-  'wraptext': function(test) {
-    test.expect(8);
-
+QUnit.module('Helpers', function () {
+  QUnit.test('uncolor', function(assert) {
+    var chalked = chalk.red('a') + chalk.bold.green('b') + chalk.blue.underline('c');
+    assert.notEqual(chalked, 'abc', 'chalked');
+    assert.equal(logUtils.uncolor(chalked), 'abc', 'uncolor');
+  });
+  QUnit.test('wordlist', function(assert) {
+    assert.equal(logUtils.uncolor(logUtils.wordlist(['a', 'b'])), 'a, b');
+    assert.equal(logUtils.uncolor(logUtils.wordlist(['a', 'b'], {separator: '-'})), 'a-b');
+  });
+  QUnit.test('wraptext', function(assert) {
     // // I'm not writing out comprehensive unit tests for this right now.
     // function doAll(text) {
     //   console.log('==========');
@@ -43,21 +34,17 @@ exports['Helpers'] = {
     // text = 'foolish monkeys eating delicious bananas forever'.rainbow;
     // doAll(text);
 
-    test.equal(logUtils.wraptext(2, 'aabbc'), 'aa\nbb\nc');
-    test.equal(logUtils.wraptext(2, 'aabbcc'), 'aa\nbb\ncc');
-    test.equal(logUtils.wraptext(3, 'aaabbbc'), 'aaa\nbbb\nc');
-    test.equal(logUtils.wraptext(3, 'aaabbbcc'), 'aaa\nbbb\ncc');
-    test.equal(logUtils.wraptext(3, 'aaabbbccc'), 'aaa\nbbb\nccc');
-    test.equal(logUtils.uncolor(logUtils.wraptext(3, 'aaa'.blue + 'bbb'.green + 'c'.underline)), 'aaa\nbbb\nc');
-    test.equal(logUtils.uncolor(logUtils.wraptext(3, 'aaa'.blue + 'bbb'.green + 'cc'.underline)), 'aaa\nbbb\ncc');
-    test.equal(logUtils.uncolor(logUtils.wraptext(3, 'aaa'.blue + 'bbb'.green + 'ccc'.underline)), 'aaa\nbbb\nccc');
-
-    test.done();
-  },
-  'table': function(test) {
-    test.expect(1);
-
-    test.equal(logUtils.table([3, 1, 5, 1, 8, 1, 12, 1, 20], [
+    assert.equal(logUtils.wraptext(2, 'aabbc'), 'aa\nbb\nc');
+    assert.equal(logUtils.wraptext(2, 'aabbcc'), 'aa\nbb\ncc');
+    assert.equal(logUtils.wraptext(3, 'aaabbbc'), 'aaa\nbbb\nc');
+    assert.equal(logUtils.wraptext(3, 'aaabbbcc'), 'aaa\nbbb\ncc');
+    assert.equal(logUtils.wraptext(3, 'aaabbbccc'), 'aaa\nbbb\nccc');
+    assert.equal(logUtils.uncolor(logUtils.wraptext(3, chalk.blue('aaa') + chalk.green('bbb') + chalk.underline('c'))), 'aaa\nbbb\nc');
+    assert.equal(logUtils.uncolor(logUtils.wraptext(3, chalk.blue('aaa') + chalk.green('bbb') + chalk.underline('cc'))), 'aaa\nbbb\ncc');
+    assert.equal(logUtils.uncolor(logUtils.wraptext(3, chalk.blue('aaa') + chalk.green('bbb') + chalk.underline('ccc'))), 'aaa\nbbb\nccc');
+  });
+  QUnit.test('table', function(assert) {
+    assert.equal(logUtils.table([3, 1, 5, 1, 8, 1, 12, 1, 20], [
       'a aa aaa aaaa aaaaa',
       '|||||||',
       'b bb bbb bbbb bbbbb',
@@ -74,6 +61,5 @@ exports['Helpers'] = {
         'a  |     |        |            |\n' +
         'aaa|     |        |            |\n' +
         'aa |     |        |            |');
-    test.done();
-  },
-};
+  });
+});
