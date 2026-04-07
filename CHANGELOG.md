@@ -1,3 +1,11 @@
+- v2.1.3:
+  - date: 2026-04-07
+  - changes:
+    - Replace "jshint" dev dependency with "eslint" ([gruntjs/grunt#1534](https://github.com/gruntjs/grunt/pull/1534))
+- v2.1.2:
+  - date: 2026-04-06
+  - changes:
+    - Re-publish to npm
 - v2.1.1:
   - date: 2026-04-03
   - changes:
