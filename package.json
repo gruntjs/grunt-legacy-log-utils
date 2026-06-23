@@ -6,7 +6,7 @@
   "homepage": "http://gruntjs.com/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/gruntjs/grunt-legacy-log-utils.git"
+    "url": "git+https://github.com/gruntjs/grunt-legacy-log-utils.git"
   },
   "bugs": {
     "url": "http://github.com/gruntjs/grunt-legacy-log-utils/issues"
